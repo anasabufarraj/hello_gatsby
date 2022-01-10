@@ -71,6 +71,12 @@ img {
   max-width: 85%;
   margin: 15px 40px;
 }
+section > ul {
+  margin: 20px 60px;
+}
+section > ul > li {
+  padding: 5px;
+}
 h1,
 figcaption,
 .btn {

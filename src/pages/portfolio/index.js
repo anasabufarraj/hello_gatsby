@@ -1,15 +1,37 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 
 function Portfolio() {
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query ProjectsPage {
+      allMarkdownRemark {
+        nodes {
+          id
+          frontmatter {
+            slug
+            title
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
-      <h1>Projects</h1>
+      <h1>Portfolio</h1>
       <section>
-        <p>Page content goes here</p>
+        <ul>
+          {allMarkdownRemark.nodes.map(_n => (
+            <li key={_n.id}>
+              <Link to={`/portfolio/${_n.frontmatter.slug}`}>
+                {_n.frontmatter.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
         <Link className="btn" to="/portfolio/support">
-          Contact Us
+          Contact Support
         </Link>
       </section>
     </Layout>
