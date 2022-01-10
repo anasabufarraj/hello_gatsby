@@ -1,31 +1,19 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 
-function Portfolio() {
-  const { allMarkdownRemark } = useStaticQuery(graphql`
-    query ProjectsPage {
-      allMarkdownRemark {
-        nodes {
-          id
-          frontmatter {
-            slug
-            title
-          }
-        }
-      }
-    }
-  `);
+function Portfolio({ data }) {
+  const projects = data.allMarkdownRemark.nodes;
 
   return (
     <Layout>
       <h1>Portfolio</h1>
       <section>
         <ul>
-          {allMarkdownRemark.nodes.map(_n => (
-            <li key={_n.id}>
-              <Link to={`/portfolio/${_n.frontmatter.slug}`}>
-                {_n.frontmatter.title}
+          {projects.map(_p => (
+            <li key={_p.id}>
+              <Link to={`/portfolio/${_p.frontmatter.slug}`}>
+                {_p.frontmatter.title}
               </Link>
             </li>
           ))}
@@ -37,5 +25,19 @@ function Portfolio() {
     </Layout>
   );
 }
+
+export const projects = graphql`
+  query Projects {
+    allMarkdownRemark {
+      nodes {
+        id
+        frontmatter {
+          slug
+          title
+        }
+      }
+    }
+  }
+`;
 
 export default Portfolio;
