@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 function Footer() {
   const { site } = useStaticQuery(graphql`
-    query SiteCopyright {
+    {
       site {
         siteMetadata {
           copyright

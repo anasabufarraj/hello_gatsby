@@ -19,8 +19,8 @@ function Home({ data }) {
   );
 }
 
-export const SiteTitleHome = graphql`
-  query SiteTitleHome {
+export const query = graphql`
+  {
     site {
       siteMetadata {
         title

@@ -26,8 +26,8 @@ function Portfolio({ data }) {
   );
 }
 
-export const projects = graphql`
-  query Projects {
+export const query = graphql`
+  {
     allMarkdownRemark {
       nodes {
         id
