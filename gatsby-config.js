@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: 'Gatsby Warrior',
     description: 'Learning Gatsby and Gatsby CLI.',
@@ -16,8 +15,12 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data/`,
+        path: `${__dirname}/src/blogs/`,
       },
+    },
+
+    {
+      resolve: `gatsby-transformer-remark`,
     },
   ],
 };

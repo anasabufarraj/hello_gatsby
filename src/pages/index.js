@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import '../styles/global.css';
 
 function Home() {
-  const { site } = useStaticQuery(graphql`
+  const { site, allFile } = useStaticQuery(graphql`
     query SiteTitleHome {
       site {
         siteMetadata {
@@ -12,18 +12,23 @@ function Home() {
           description
         }
       }
+      allFile {
+        nodes {
+          relativePath
+          size
+        }
+      }
     }
   `);
 
   return (
     <Layout>
-      {/* Start: Layout index Children */}
       <h1>{site.siteMetadata.title}</h1>
       <section>
         <p>{site.siteMetadata.description}</p>
         <img src="iguana_image.jpg" alt="Iguana" draggable="false" />
+        <figcaption>File Name: {allFile.nodes[0].relativePath}</figcaption>
       </section>
-      {/* End: Layout index Children */}
     </Layout>
   );
 }

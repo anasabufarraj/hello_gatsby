@@ -69,9 +69,10 @@ footer p {
 }
 img {
   max-width: 85%;
-  margin: 40px;
+  margin: 15px 40px;
 }
 h1,
+figcaption,
 .btn {
   margin: 0 40px;
 }
