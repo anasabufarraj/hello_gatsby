@@ -6,12 +6,12 @@ function Projects() {
   return (
     <Layout>
       <h1>Projects</h1>
-      <sections>
+      <section>
         <p>Page content goes here</p>
         <Link className="btn" to="/projects/support">
           Contact Support
         </Link>
-      </sections>
+      </section>
     </Layout>
   );
 }

@@ -5,9 +5,9 @@ function Notfound() {
   return (
     <Layout>
       <h1>404</h1>
-      <sections>
+      <section>
         <p>Page not found</p>
-      </sections>
+      </section>
     </Layout>
   );
 }
