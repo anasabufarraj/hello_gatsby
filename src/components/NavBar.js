@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-function NavBar(props) {
+function Navbar() {
   return (
     <nav>
       <ul>
@@ -13,4 +13,4 @@ function NavBar(props) {
   );
 }
 
-export default NavBar;
+export default Navbar;

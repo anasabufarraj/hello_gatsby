@@ -7,9 +7,17 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Hello Gatsby',
-    description: 'Learning Gatsby',
+    title: 'Gatsby Warrior',
+    description: 'Learning Gatsby and Gatsby CLI.',
     copyright: 'Copyright 2021. All rights are reserved.',
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+  ],
 };

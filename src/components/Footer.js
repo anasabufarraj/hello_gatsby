@@ -1,9 +1,20 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-function Footer(props) {
+function Footer() {
+  const { site } = useStaticQuery(graphql`
+    query SiteCopyright {
+      site {
+        siteMetadata {
+          copyright
+        }
+      }
+    }
+  `);
+
   return (
     <footer>
-      <small>® Copyright 2021. All rights are reserved.</small>
+      <small>® {site.siteMetadata.copyright}</small>
     </footer>
   );
 }

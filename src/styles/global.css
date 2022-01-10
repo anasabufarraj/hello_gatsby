@@ -45,7 +45,8 @@ nav .links {
 }
 nav a {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 14px;
+  margin-top: 10px;
   font-weight: 400;
   padding-bottom: 8px;
   border-bottom: 3px solid transparent;
