@@ -28,11 +28,12 @@ function Portfolio({ data }) {
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___title, order: ASC }) {
       nodes {
         id
         frontmatter {
           slug
+          stack
           title
         }
       }

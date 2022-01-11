@@ -1,33 +1,35 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import '../styles/global.css';
+import '../../static/global.css';
 
 function Home({ data }) {
-  const { title, description } = data.site.siteMetadata;
-  const allFile = data.allFile.nodes[1].relativePath;
+  const { title, description } = data.metadata.siteMetadata;
+  const file = data.files.nodes[1].relativePath;
 
   return (
     <Layout>
       <h1>{title}</h1>
       <section>
         <p>{description}</p>
-        <img src="iguana_image.jpg" alt="Iguana" draggable="false" />
-        <figcaption>File Name: {allFile}</figcaption>
+        <img src="iguana.jpg" alt="Iguana" draggable="false" />
+        <small>Image regularly loaded from the 'static' directory.</small>
       </section>
+      <small>File Name: {file}</small>
     </Layout>
   );
 }
 
+// Titled queries
 export const query = graphql`
   {
-    site {
+    metadata: site {
       siteMetadata {
         title
         description
       }
     }
-    allFile {
+    files: allFile {
       nodes {
         relativePath
         size

@@ -11,11 +11,30 @@ module.exports = {
     copyright: 'Copyright 2021. All rights are reserved.',
   },
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`, // For dynamic images
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          quality: 80,
+          backgroundColor: 'black',
+          jpgOptions: { progressive: true },
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
+        name: `projects`,
         path: `${__dirname}/src/projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     {
