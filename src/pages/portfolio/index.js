@@ -28,7 +28,7 @@ function Portfolio({ data }) {
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: frontmatter___title, order: ASC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___title, order: DESC }) {
       nodes {
         id
         frontmatter {
