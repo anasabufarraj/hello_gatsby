@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 
 function Portfolio({ data }) {
   const projects = data.allMarkdownRemark.nodes;
-
+  
   return (
     <Layout>
       <h1>Portfolio</h1>
@@ -35,6 +35,14 @@ export const query = graphql`
           slug
           stack
           title
+          thumb {
+            childrenImageSharp {
+              id
+              fluid {
+                src
+              }
+            }
+          }
         }
       }
     }

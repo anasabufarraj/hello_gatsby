@@ -68,8 +68,7 @@ footer p {
   margin: 40px auto;
 }
 img,
-.img,
-small {
+.img {
   max-width: 85%;
   margin: 15px 40px;
 }
@@ -80,6 +79,9 @@ section > ul > li {
   padding: 5px;
 }
 h1,
+h2,
+h3,
+h4,
 figcaption,
 .btn {
   margin: 0 40px;
