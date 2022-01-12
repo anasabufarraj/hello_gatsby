@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from './Navbar';
+import NavBar from './NavBar';
 import Footer from './Footer';
 
 function Layout({ children }) {
   return (
     <React.Fragment>
-      <Navbar />
+      <NavBar />
       <div>{children}</div>
       <Footer />
     </React.Fragment>
