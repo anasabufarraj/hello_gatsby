@@ -21,13 +21,6 @@ export const query = graphql`
       frontmatter {
         stack
         title
-        featureImg {
-          childImageSharp {
-            fluid {
-              src
-            }
-          }
-        }
       }
       html
     }
