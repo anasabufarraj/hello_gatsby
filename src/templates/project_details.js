@@ -1,10 +1,10 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
 
 function ProjectsDetails({ data }) {
-  const { html } = data.markdownRemark;
-  const { title, stack } = data.markdownRemark.frontmatter;
+  const { html } = data.markdownRemark
+  const { title, stack } = data.markdownRemark.frontmatter
 
   return (
     <Layout>
@@ -12,7 +12,7 @@ function ProjectsDetails({ data }) {
       <h3>{stack}</h3>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -25,6 +25,6 @@ export const query = graphql`
       html
     }
   }
-`;
+`
 
-export default ProjectsDetails;
+export default ProjectsDetails

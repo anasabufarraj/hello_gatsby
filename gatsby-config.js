@@ -41,4 +41,4 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
     },
   ],
-};
+}

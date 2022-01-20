@@ -1,5 +1,5 @@
-import React from 'react';
-import Layout from '../components/Layout';
+import React from 'react'
+import Layout from '../components/Layout'
 
 function Notfound() {
   return (
@@ -9,7 +9,7 @@ function Notfound() {
         <p>Page not found</p>
       </section>
     </Layout>
-  );
+  )
 }
 
-export default Notfound;
+export default Notfound

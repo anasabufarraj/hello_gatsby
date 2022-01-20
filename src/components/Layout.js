@@ -1,6 +1,7 @@
-import React from 'react';
-import NavBar from './NavBar';
-import Footer from './Footer';
+import React from 'react'
+import NavBar from './NavBar'
+import Footer from './Footer'
+import '../../static/global.css'
 
 function Layout({ children }) {
   return (
@@ -9,7 +10,7 @@ function Layout({ children }) {
       <div>{children}</div>
       <Footer />
     </React.Fragment>
-  );
+  )
 }
 
-export default Layout;
+export default Layout

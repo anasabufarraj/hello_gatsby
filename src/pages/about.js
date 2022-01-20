@@ -1,6 +1,6 @@
-import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import Layout from '../components/Layout';
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import Layout from '../components/Layout'
 
 function About() {
   return (
@@ -20,7 +20,7 @@ function About() {
         Static Image, options overrides the default in 'gatsby-config.js'.
       </small>
     </Layout>
-  );
+  )
 }
 
-export default About;
+export default About

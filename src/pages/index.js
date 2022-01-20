@@ -1,11 +1,11 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import '../../static/global.css';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import '../../static/global.css'
 
 function Home({ data }) {
-  const { title, description } = data.metadata.siteMetadata;
-  const file = data.files.nodes[1].relativePath;
+  const { title, description } = data.metadata.siteMetadata
+  const file = data.files.nodes[1].relativePath
 
   return (
     <Layout>
@@ -17,10 +17,9 @@ function Home({ data }) {
       </section>
       <small>File Name: {file}</small>
     </Layout>
-  );
+  )
 }
 
-// Titled queries
 export const query = graphql`
   {
     metadata: site {
@@ -36,6 +35,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Home;
+export default Home
