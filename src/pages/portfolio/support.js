@@ -1,10 +1,10 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import Layout from '../../components/Layout';
+import React from 'react'
+import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Layout from '../../components/layout'
 
 function Support({ data }) {
-  const iguana_dynamic = getImage(data.file.childImageSharp);
+  const iguana_dynamic = getImage(data.file.childImageSharp)
 
   return (
     <Layout>
@@ -17,7 +17,7 @@ function Support({ data }) {
         Dynamic Image, use only default options in 'gatsby-config.js'.
       </small>
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -31,6 +31,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Support;
+export default Support

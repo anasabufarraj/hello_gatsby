@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 function About() {
   return (
