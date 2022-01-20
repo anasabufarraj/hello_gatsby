@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Layout from '../../components/layout';
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../../components/layout'
 
 function Portfolio({ data }) {
-  const projects = data.allMarkdownRemark.nodes;
+  const projects = data.allMarkdownRemark.nodes
 
   return (
     <Layout>
@@ -23,7 +23,7 @@ function Portfolio({ data }) {
         </Link>
       </section>
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -47,6 +47,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Portfolio;
+export default Portfolio
