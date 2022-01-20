@@ -5,11 +5,11 @@ import '../../static/global.css' // Important to solve the CSS breakdown when re
 
 function Layout({ children }) {
   return (
-    <React.Fragment>
+    <div>
       <NavBar />
       {children}
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }
 
