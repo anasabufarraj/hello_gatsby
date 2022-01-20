@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <React.Fragment>
       <NavBar />
-      <div>{children}</div>
+      {children}
       <Footer />
     </React.Fragment>
   )
